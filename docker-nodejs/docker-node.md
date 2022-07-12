@@ -68,3 +68,21 @@ agar bind mode tidak mengoverite folder yang dinginkan seperti node_modules maka
 - docker run -v pathlocalhost:pathdocker -v workdir -p 3000:3000 -d --name node-server node-app
 - docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-server node-app
 - read only bind mode: docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-server node-app
+
+## Docker ENV
+
+- untuk mengset env bisa dilakukan di dokcerfile dengan menambah keyword ENV
+- melalui command: docker run -v $(pwd):/app:ro -v /app/node_modules --env PORT=4000 -p 3000:3000 -d --name node-server node-app
+- load env lewat file: docker run -v $(pwd):/app:ro -v /app/node_modules --env-file path_env -p 3000:3000 -d --name node-server node-app
+- cek env: masuk ke bash docker lalu ketik rintenv
+
+## Docker Compose
+
+Compose adalah alat untuk mendefinisikan dan menjalankan aplikasi Docker multi-kontainer. Dengan Compose, Anda menggunakan file YAML untuk mengonfigurasi layanan aplikasi Anda.
+
+- untuk dokumentasi resminya: https://docs.docker.com/compose/
+- untuk version compose: https://docs.docker.com/compose/compose-file/compose-versioning/
+- `docker compose up -d` untuk menjalankan
+- `docker compose up -d -- build` untuk menjalankan dan rebuild jika image berubah
+- `docker compose down` untuk menghentikan
+- `docker compose down -v` untuk menghentikan dan menghapus volume
