@@ -13,3 +13,11 @@ ikuti langkah installasinya:
 
 - setelah itu klik install dan tunggu proses installasi
   ![alt text](./image/Screenshot%20from%202022-07-12%2010-22-14.png)
+
+## Init Express App
+
+Buat simpel server express dengan cara berikut:
+
+- npm init
+- npm install express
+- lalu jalankan server node index.js
