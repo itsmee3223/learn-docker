@@ -86,3 +86,11 @@ Compose adalah alat untuk mendefinisikan dan menjalankan aplikasi Docker multi-k
 - `docker compose up -d -- build` untuk menjalankan dan rebuild jika image berubah
 - `docker compose down` untuk menghentikan
 - `docker compose down -v` untuk menghentikan dan menghapus volume
+
+## Docker Compose Shared Dev & Production
+
+kita bisa override file docker compose untuk developing dan juga production sekaligus bisa berbagi konfigurasi yang sama
+
+- untuk menjalankannya: docker compose -f docker_compose_base.yml docker_compose_env.yml up -d
+- contoh menggunakan: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+- posisi file berpangruh dimana jika ada setting yg di override oleh file kedua

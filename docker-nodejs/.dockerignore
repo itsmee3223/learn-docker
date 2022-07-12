@@ -1,4 +1,5 @@
 node_modules
+docker-compose*
 image
 Dockerfile
 docker-node.md
