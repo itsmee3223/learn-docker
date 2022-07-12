@@ -60,3 +60,11 @@ ada beberapa type volume salah satunya yaitu bind. bind volume digunakan untuk s
 
 - untuk command: docker run -v pathlocalhost:pathdocker -p 3000:3000 -d --name node-server node-app
 - contoh penggunaan: docker run -v $(pwd):/app -p 3000:3000 -d --name node-server node-app
+
+## Prevent Bind Volume
+
+agar bind mode tidak mengoverite folder yang dinginkan seperti node_modules maka gunakan command berikut:
+
+- docker run -v pathlocalhost:pathdocker -v workdir -p 3000:3000 -d --name node-server node-app
+- docker run -v $(pwd):/app -v /app/node_modules -p 3000:3000 -d --name node-server node-app
+- read only bind mode: docker run -v $(pwd):/app:ro -v /app/node_modules -p 3000:3000 -d --name node-server node-app
