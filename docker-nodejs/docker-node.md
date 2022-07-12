@@ -47,3 +47,9 @@ Buat simpel server express dengan cara berikut:
   - docker run -p 3000:3000 -d --name node-server node-app
   - -p artinya kita forwarding localhost port kita ke port yang di expose dokcer
   - -d artinya kita running detached mode agar cli bisa free
+  - untuk masuk ke cli -> docker exec -it node-server bash
+
+## Create Docker Ignore file
+
+- buat file .dokcerignore
+- lalu masukan file atau folder yang di ignore
