@@ -38,3 +38,12 @@ Buat simpel server express dengan cara berikut:
 - build ulang dengan cara docker build -t docker-image-name path_dockerfile
 
   ![alt text](./image/Screenshot%20from%202022-07-12%2011-16-24.png)
+
+## Running Docker Image & Create Container
+
+- untuk menjalankan dokcer image gunnakan command berikut: dokcer run --name container_name docker_image_name
+  - contoh penggunaan: dcoker run --name node-server node-app
+- agar bisa diakases perlu tag tambahan
+  - docker run -p 3000:3000 -d --name node-server node-app
+  - -p artinya kita forwarding localhost port kita ke port yang di expose dokcer
+  - -d artinya kita running detached mode agar cli bisa free
