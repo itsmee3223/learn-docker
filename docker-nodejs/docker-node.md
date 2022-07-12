@@ -53,3 +53,10 @@ Buat simpel server express dengan cara berikut:
 
 - buat file .dokcerignore
 - lalu masukan file atau folder yang di ignore
+
+## Bind Volume
+
+ada beberapa type volume salah satunya yaitu bind. bind volume digunakan untuk sync folder yang ada di localhost dengan dokcer.
+
+- untuk command: docker run -v pathlocalhost:pathdocker -p 3000:3000 -d --name node-server node-app
+- contoh penggunaan: docker run -v $(pwd):/app -p 3000:3000 -d --name node-server node-app
