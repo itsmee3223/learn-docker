@@ -102,3 +102,10 @@ Link: https://hub.docker.com/_/mongo
 - untuk menyimpan data agar tidak hilang silahkan buat volume
 - contoh volume:
   - mongo-db:/data/db
+
+## Docker Redis
+
+untuk link docker hub:
+
+- https://hub.docker.com/_/redis
+-
