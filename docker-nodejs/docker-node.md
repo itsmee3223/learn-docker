@@ -83,7 +83,7 @@ Compose adalah alat untuk mendefinisikan dan menjalankan aplikasi Docker multi-k
 - untuk dokumentasi resminya: https://docs.docker.com/compose/
 - untuk version compose: https://docs.docker.com/compose/compose-file/compose-versioning/
 - `docker compose up -d` untuk menjalankan
-- `docker compose up -d -- build` untuk menjalankan dan rebuild jika image berubah
+- `docker compose up -d --build` untuk menjalankan dan rebuild jika image berubah
 - `docker compose down` untuk menghentikan
 - `docker compose down -v` untuk menghentikan dan menghapus volume
 
@@ -94,3 +94,11 @@ kita bisa override file docker compose untuk developing dan juga production seka
 - untuk menjalankannya: docker compose -f docker_compose_base.yml docker_compose_env.yml up -d
 - contoh menggunakan: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 - posisi file berpangruh dimana jika ada setting yg di override oleh file kedua
+
+## Docker MongoDB
+
+Link: https://hub.docker.com/_/mongo
+
+- untuk menyimpan data agar tidak hilang silahkan buat volume
+- contoh volume:
+  - mongo-db:/data/db

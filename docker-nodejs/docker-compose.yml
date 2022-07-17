@@ -8,3 +8,15 @@ services:
       - PORT=3000
     # env_file:
     #   - fileName
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ramanda
+      MONGO_INITDB_ROOT_PASSWORD: ramanda123
+    volumes:
+      - mongo-db:/data/db
+volumes:
+ mongo-db:
