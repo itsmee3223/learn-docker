@@ -105,7 +105,14 @@ Link: https://hub.docker.com/_/mongo
 
 ## Docker Redis
 
+menggunakan redis sebagai session store untuk management user
+
 untuk link docker hub:
 
 - https://hub.docker.com/_/redis
--
+
+## Docker Nginx & Load Balancer
+
+untuk melakukan load balancing dapat menggunakan nginx
+
+link dockerhub nginx: https://hub.docker.com/_/nginx
